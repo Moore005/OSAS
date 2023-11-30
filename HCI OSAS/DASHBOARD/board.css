@@ -1,0 +1,87 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Times New Roman;
+
+}
+body {
+	background-image: url(osas.png);
+	background-repeat: no-repeat;
+	background-size: center;
+	background-position-x: center;
+}
+.container{
+	height: 100%;
+	width: 250px;
+	position: absolute;
+	background: #ffc20e;
+	z-index: 1;
+	transition: 0.5s ease;
+	transform: translateX(-250px);
+}
+.container .head{
+	color: #009900;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 30px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	background-color: #ffc20e;
+}
+ol{
+	width: 100%;
+	list-style: none;
+}
+ol li{
+	display: block;
+	width: 100%;
+}
+ol li a{
+	color: #009900;
+	padding: 20px 10px;
+	text-decoration: none;
+	display: block;
+	font-size: 12px;
+	letter-spacing: 2px;
+	position: relative;
+	transition: 0.3s;
+	overflow: hidden;
+	text-transform: capitalize;
+}
+ol li a i{
+	width: 30px;
+	font-size: 15px;
+
+}
+ol li:hover a{
+	background: #009900;
+	color: #ffc20e;
+	letter-spacing: 5px;
+}
+input{
+	-webkit-appearance: none;
+	visibility: hidden;
+	display: none;
+}
+span{
+	position: absolute;
+	right: -40px;
+	top: 30px;
+	font-size: 24px;
+	border-radius: 3px;
+	color: #009900;
+	padding: 3px 8px;
+	cursor: pointer;
+	background: #ffc20e;
+}
+#bars{
+	background: #ffc20e;
+}
+#check:checked ~ .container{
+	transform: translateX(0);
+}
+#check:checked ~ .container #bars{
+	display: none;
+}
